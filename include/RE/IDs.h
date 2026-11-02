@@ -427,7 +427,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID Lock{ 123819 };
 		inline constexpr REL::ID TryLock{ 123818 };
-		inline constexpr REL::ID Unlock{ 35630 };
+		inline constexpr REL::ID AutoLockDtor{ 35630 };
 	}
 
 	namespace BSStringT

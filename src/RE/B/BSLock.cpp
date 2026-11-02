@@ -70,9 +70,9 @@ namespace RE
 
 	void BSSpinLock::UnlockImpl(BSSpinLock* a_lock)
 	{
-		// Bethesda whyyy!?
+		// the native release is BSAutoLock<BSSpinLock>::~BSAutoLock
 		using func_t = void (*)(BSSpinLock**);
-		static REL::Relocation<func_t> func{ ID::BSSpinLock::Unlock };
+		static REL::Relocation<func_t> func{ ID::BSSpinLock::AutoLockDtor };
 		func(&a_lock);
 	}
 }
